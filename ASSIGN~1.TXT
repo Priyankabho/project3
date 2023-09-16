@@ -1,0 +1,685 @@
+
+viraj@DBDA:~$ sudo adduser tom
+
+viraj@DBDA:~$ sudo adduser bob
+ 
+viraj@DBDA:~$ sudo adduser sam
+
+viraj@DBDA:~$ sudo adduser prince
+
+viraj@DBDA:~$ sudo groupadd dac
+viraj@DBDA:~$ sudo groupadd dbda
+viraj@DBDA:~$ sudo groupadd ditiss
+viraj@DBDA:~$ ls -l
+total 60
+drwxr-xr-x 4 viraj viraj 4096 Sep 10 15:08 Desktop
+drwxr-xr-x 2 viraj viraj 4096 Sep  9 19:44 Documents
+drwxr-xr-x 2 viraj viraj 4096 Sep  9 19:44 Downloads
+drwxrwxr-x 2 viraj viraj 4096 Sep 11 13:08 family
+-rw-rw-r-- 1 viraj viraj  229 Sep 11 17:19 gt.sh
+drwxr-xr-x 2 viraj viraj 4096 Sep 11 12:21 Music
+-rwxrw-r-- 1 viraj viraj   57 Sep 11 15:36 new.sh
+-rw-rw-r-- 1 viraj viraj    7 Sep 11 16:58 neww.txt
+-rw-rw-r-- 1 viraj viraj  195 Sep 11 16:19 odd_even.sh
+drwxr-xr-x 2 viraj viraj 4096 Sep 11 12:22 Pictures
+drwxr-xr-x 2 viraj viraj 4096 Sep  9 19:44 Public
+drwx------ 3 viraj viraj 4096 Sep  9 19:44 snap
+drwxr-xr-x 2 viraj viraj 4096 Sep  9 19:44 Templates
+drwxr-xr-x 2 viraj viraj 4096 Sep 11 12:23 Videos
+drwxrwxr-x 2 viraj viraj 4096 Sep 11 12:53 work
+viraj@DBDA:~$ cd ..
+viraj@DBDA:/home$ ls -l
+total 96
+drwxr-x---  2 apple       apple       4096 Sep 11 17:19 apple
+drwxr-x---  2 banana      banana      4096 Sep 11 17:19 banana
+drwxr-x---  2 bob         bob         4096 Sep 11 17:22 bob
+drwxr-x---  2 cat         cat         4096 Sep 11 10:35 cat
+drwxr-x---  2 china       china       4096 Sep 11 17:19 china
+drwxr-x---  2 dog         dog         4096 Sep 11 17:19 dog
+drwxr-x---  2 elephant    elephant    4096 Sep 11 17:19 elephant
+drwxrwxrwx  2 root        root        4096 Sep 11 11:26 EVERYONE
+drwxr-x---  2 fish        fish        4096 Sep 11 17:19 fish
+drwxr-x---  2 gun         gun         4096 Sep 11 17:19 gun
+drwxr-x---  2 horse       horse       4096 Sep 11 17:19 horse
+drwxr-x---  2 icecream    icecream    4096 Sep 11 17:19 icecream
+drwxr-x---  2 jelly       jelly       4096 Sep 11 17:19 jelly
+drwxr-x---  2 kitkat      kitkat      4096 Sep 11 17:19 kitkat
+drwxr-x---  2 lollipop    lollipop    4096 Sep 11 17:19 lollipop
+drwxr-x---  2 marshmellow marshmellow 4096 Sep 11 17:19 marshmellow
+drwxr-x---  2 new         new         4096 Sep 11 17:19 new
+drwxr-x---  2 oppo        One         4096 Sep 11 17:19 oppo
+drwxr-x---  2 prince      prince      4096 Sep 11 17:22 prince
+drwxr-x---  2 sam         sam         4096 Sep 11 17:22 sam
+drwxr-x---  2 tom         tom         4096 Sep 11 17:21 tom
+drwxr-x--- 18 viraj       viraj       4096 Sep 11 17:19 viraj
+drwxr-x---  2 vivo        Two         4096 Sep 11 17:19 vivo
+drwxr-x---  2 zebra       One         4096 Sep 11 10:44 zebra
+viraj@DBDA:/home$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,viraj
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:viraj
+floppy:x:25:
+tape:x:26:
+sudo:x:27:viraj,vivo,jelly,kitkat,lollipop,marshmellow
+audio:x:29:pulse
+dip:x:30:viraj
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:viraj
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+crontab:x:104:
+messagebus:x:105:
+systemd-timesync:x:106:
+input:x:107:
+sgx:x:108:
+kvm:x:109:
+render:x:110:
+syslog:x:111:
+_ssh:x:112:
+tss:x:113:
+bluetooth:x:114:
+ssl-cert:x:115:
+uuidd:x:116:
+systemd-oom:x:117:
+tcpdump:x:118:
+avahi-autoipd:x:119:
+netdev:x:120:
+avahi:x:121:
+lpadmin:x:122:viraj
+rtkit:x:123:
+whoopsie:x:124:
+sssd:x:125:
+fwupd-refresh:x:126:
+nm-openvpn:x:127:
+scanner:x:128:saned
+saned:x:129:
+colord:x:130:
+geoclue:x:131:
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:viraj
+viraj:x:1000:
+sambashare:x:136:viraj
+One:x:1001:apple,banana,cat,dog,elephant,fish,gun
+Two:x:1002:horse,icecream
+Three:x:1003:
+Four:x:1004:new,oppo,china
+apple:x:1005:
+banana:x:1006:
+cat:x:1007:
+dog:x:1008:
+elephant:x:1009:
+fish:x:1010:
+gun:x:1011:
+horse:x:1012:
+icecream:x:1013:
+jelly:x:1014:
+kitkat:x:1015:
+marshmellow:x:1016:
+new:x:1017:
+oppo:x:1018:
+vivo:x:1019:
+china:x:1020:
+lollipop:x:1021:
+tom:x:1022:
+bob:x:1023:
+sam:x:1024:
+prince:x:1025:
+dac:x:1026:
+dbda:x:1027:
+ditiss:x:1028:
+viraj@DBDA:/home$ sudo usermod tom -G dac
+viraj@DBDA:/home$ sudo usermod bob -G dbda
+viraj@DBDA:/home$ sudo usermod sam -G ditiss
+viraj@DBDA:/home$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,viraj
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:viraj
+floppy:x:25:
+tape:x:26:
+sudo:x:27:viraj,vivo,jelly,kitkat,lollipop,marshmellow
+audio:x:29:pulse
+dip:x:30:viraj
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:viraj
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+crontab:x:104:
+messagebus:x:105:
+systemd-timesync:x:106:
+input:x:107:
+sgx:x:108:
+kvm:x:109:
+render:x:110:
+syslog:x:111:
+_ssh:x:112:
+tss:x:113:
+bluetooth:x:114:
+ssl-cert:x:115:
+uuidd:x:116:
+systemd-oom:x:117:
+tcpdump:x:118:
+avahi-autoipd:x:119:
+netdev:x:120:
+avahi:x:121:
+lpadmin:x:122:viraj
+rtkit:x:123:
+whoopsie:x:124:
+sssd:x:125:
+fwupd-refresh:x:126:
+nm-openvpn:x:127:
+scanner:x:128:saned
+saned:x:129:
+colord:x:130:
+geoclue:x:131:
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:viraj
+viraj:x:1000:
+sambashare:x:136:viraj
+One:x:1001:apple,banana,cat,dog,elephant,fish,gun
+Two:x:1002:horse,icecream
+Three:x:1003:
+Four:x:1004:new,oppo,china
+apple:x:1005:
+banana:x:1006:
+cat:x:1007:
+dog:x:1008:
+elephant:x:1009:
+fish:x:1010:
+gun:x:1011:
+horse:x:1012:
+icecream:x:1013:
+jelly:x:1014:
+kitkat:x:1015:
+marshmellow:x:1016:
+new:x:1017:
+oppo:x:1018:
+vivo:x:1019:
+china:x:1020:
+lollipop:x:1021:
+tom:x:1022:
+bob:x:1023:
+sam:x:1024:
+prince:x:1025:
+dac:x:1026:tom
+dbda:x:1027:bob
+ditiss:x:1028:sam
+viraj@DBDA:/home$ 
+viraj@DBDA:/home$ 
+viraj@DBDA:/home$ 
+viraj@DBDA:/home$ su prince
+Password: 
+prince@DBDA:/home$ ls
+apple   bob  china  elephant  fish  horse     jelly   lollipop     new   prince  tom    vivo
+banana  cat  dog    EVERYONE  gun   icecream  kitkat  marshmellow  oppo  sam     viraj  zebra
+prince@DBDA:/home$ ls -a
+.   apple   bob  china  elephant  fish  horse     jelly   lollipop     new   prince  tom    vivo
+..  banana  cat  dog    EVERYONE  gun   icecream  kitkat  marshmellow  oppo  sam     viraj  zebra
+prince@DBDA:/home$ cd ..
+prince@DBDA:/$ ls
+bin   cdrom  etc      home  lib32  libx32      media  opt   root  sbin  srv       sys  usr
+boot  dev    friends  lib   lib64  lost+found  mnt    proc  run   snap  swapfile  tmp  var
+prince@DBDA:/$ pwd
+/
+prince@DBDA:/$ cd home
+prince@DBDA:/home$ pwd
+/home
+prince@DBDA:/home$ cd root
+bash: cd: root: No such file or directory
+prince@DBDA:/home$ ls
+apple   bob  china  elephant  fish  horse     jelly   lollipop     new   prince  tom    vivo
+banana  cat  dog    EVERYONE  gun   icecream  kitkat  marshmellow  oppo  sam     viraj  zebra
+prince@DBDA:/home$ cd prince
+prince@DBDA:~$ ls
+prince@DBDA:~$ ls -l
+total 0
+prince@DBDA:~$ cd ..
+prince@DBDA:/home$ cd ..
+prince@DBDA:/$ cd tmp
+prince@DBDA:/tmp$ mkdir iacsd
+prince@DBDA:/tmp$ cd iacsd
+prince@DBDA:/tmp/iacsd$ touch project-{1..4}
+prince@DBDA:/tmp/iacsd$ ls
+project-1  project-2  project-3  project-4
+prince@DBDA:/tmp/iacsd$ ls -l
+total 0
+-rw-rw-r-- 1 prince prince 0 Sep 11 17:32 project-1
+-rw-rw-r-- 1 prince prince 0 Sep 11 17:32 project-2
+-rw-rw-r-- 1 prince prince 0 Sep 11 17:32 project-3
+-rw-rw-r-- 1 prince prince 0 Sep 11 17:32 project-4
+prince@DBDA:/tmp/iacsd$ man chon
+No manual entry for chon
+prince@DBDA:/tmp/iacsd$ man chown
+prince@DBDA:/tmp/iacsd$ sudo chown tom project-1
+[sudo] password for prince: 
+prince is not in the sudoers file.  This incident will be reported.
+prince@DBDA:/tmp/iacsd$ su viraj
+Password: 
+su: Authentication failure
+prince@DBDA:/tmp/iacsd$ su viraj
+Password: 
+viraj@DBDA:/tmp/iacsd$ sudo chown tom project-1
+viraj@DBDA:/tmp/iacsd$ ls -l
+total 0
+-rw-rw-r-- 1 tom    prince 0 Sep 11 17:32 project-1
+-rw-rw-r-- 1 prince prince 0 Sep 11 17:32 project-2
+-rw-rw-r-- 1 prince prince 0 Sep 11 17:32 project-3
+-rw-rw-r-- 1 prince prince 0 Sep 11 17:32 project-4
+viraj@DBDA:/tmp/iacsd$ sudo chown dac project-2
+chown: invalid user: ‘dac’
+viraj@DBDA:/tmp/iacsd$ sudo chgrp dac project-2 
+viraj@DBDA:/tmp/iacsd$ ls -l
+total 0
+-rw-rw-r-- 1 tom    prince 0 Sep 11 17:32 project-1
+-rw-rw-r-- 1 prince dac    0 Sep 11 17:32 project-2
+-rw-rw-r-- 1 prince prince 0 Sep 11 17:32 project-3
+-rw-rw-r-- 1 prince prince 0 Sep 11 17:32 project-4
+viraj@DBDA:/tmp/iacsd$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,viraj
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:viraj
+floppy:x:25:
+tape:x:26:
+sudo:x:27:viraj,vivo,jelly,kitkat,lollipop,marshmellow
+audio:x:29:pulse
+dip:x:30:viraj
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:viraj
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+crontab:x:104:
+messagebus:x:105:
+systemd-timesync:x:106:
+input:x:107:
+sgx:x:108:
+kvm:x:109:
+render:x:110:
+syslog:x:111:
+_ssh:x:112:
+tss:x:113:
+bluetooth:x:114:
+ssl-cert:x:115:
+uuidd:x:116:
+systemd-oom:x:117:
+tcpdump:x:118:
+avahi-autoipd:x:119:
+netdev:x:120:
+avahi:x:121:
+lpadmin:x:122:viraj
+rtkit:x:123:
+whoopsie:x:124:
+sssd:x:125:
+fwupd-refresh:x:126:
+nm-openvpn:x:127:
+scanner:x:128:saned
+saned:x:129:
+colord:x:130:
+geoclue:x:131:
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:viraj
+viraj:x:1000:
+sambashare:x:136:viraj
+One:x:1001:apple,banana,cat,dog,elephant,fish,gun
+Two:x:1002:horse,icecream
+Three:x:1003:
+Four:x:1004:new,oppo,china
+apple:x:1005:
+banana:x:1006:
+cat:x:1007:
+dog:x:1008:
+elephant:x:1009:
+fish:x:1010:
+gun:x:1011:
+horse:x:1012:
+icecream:x:1013:
+jelly:x:1014:
+kitkat:x:1015:
+marshmellow:x:1016:
+new:x:1017:
+oppo:x:1018:
+vivo:x:1019:
+china:x:1020:
+lollipop:x:1021:
+tom:x:1022:
+bob:x:1023:
+sam:x:1024:
+prince:x:1025:
+dac:x:1026:tom
+dbda:x:1027:bob
+ditiss:x:1028:sam
+viraj@DBDA:/tmp/iacsd$ sudo usermod tom -G prince
+viraj@DBDA:/tmp/iacsd$ cat /etc/group/prince
+cat: /etc/group/prince: Not a directory
+viraj@DBDA:/tmp/iacsd$ cat /etc/group/
+cat: /etc/group/: Not a directory
+viraj@DBDA:/tmp/iacsd$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,viraj
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:viraj
+floppy:x:25:
+tape:x:26:
+sudo:x:27:viraj,vivo,jelly,kitkat,lollipop,marshmellow
+audio:x:29:pulse
+dip:x:30:viraj
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:viraj
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+crontab:x:104:
+messagebus:x:105:
+systemd-timesync:x:106:
+input:x:107:
+sgx:x:108:
+kvm:x:109:
+render:x:110:
+syslog:x:111:
+_ssh:x:112:
+tss:x:113:
+bluetooth:x:114:
+ssl-cert:x:115:
+uuidd:x:116:
+systemd-oom:x:117:
+tcpdump:x:118:
+avahi-autoipd:x:119:
+netdev:x:120:
+avahi:x:121:
+lpadmin:x:122:viraj
+rtkit:x:123:
+whoopsie:x:124:
+sssd:x:125:
+fwupd-refresh:x:126:
+nm-openvpn:x:127:
+scanner:x:128:saned
+saned:x:129:
+colord:x:130:
+geoclue:x:131:
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:viraj
+viraj:x:1000:
+sambashare:x:136:viraj
+One:x:1001:apple,banana,cat,dog,elephant,fish,gun
+Two:x:1002:horse,icecream
+Three:x:1003:
+Four:x:1004:new,oppo,china
+apple:x:1005:
+banana:x:1006:
+cat:x:1007:
+dog:x:1008:
+elephant:x:1009:
+fish:x:1010:
+gun:x:1011:
+horse:x:1012:
+icecream:x:1013:
+jelly:x:1014:
+kitkat:x:1015:
+marshmellow:x:1016:
+new:x:1017:
+oppo:x:1018:
+vivo:x:1019:
+china:x:1020:
+lollipop:x:1021:
+tom:x:1022:
+bob:x:1023:
+sam:x:1024:
+prince:x:1025:tom
+dac:x:1026:
+dbda:x:1027:bob
+ditiss:x:1028:sam
+viraj@DBDA:/tmp/iacsd$ ls -l
+total 0
+-rw-rw-r-- 1 tom    prince 0 Sep 11 17:32 project-1
+-rw-rw-r-- 1 prince dac    0 Sep 11 17:32 project-2
+-rw-rw-r-- 1 prince prince 0 Sep 11 17:32 project-3
+-rw-rw-r-- 1 prince prince 0 Sep 11 17:32 project-4
+viraj@DBDA:/tmp/iacsd$ sudo chmod 660 project-3
+viraj@DBDA:/tmp/iacsd$ ls-l
+ls-l: command not found
+viraj@DBDA:/tmp/iacsd$ ls -l
+total 0
+-rw-rw-r-- 1 tom    prince 0 Sep 11 17:32 project-1
+-rw-rw-r-- 1 prince dac    0 Sep 11 17:32 project-2
+-rw-rw---- 1 prince prince 0 Sep 11 17:32 project-3
+-rw-rw-r-- 1 prince prince 0 Sep 11 17:32 project-4
+viraj@DBDA:/tmp/iacsd$ sudo usermod prince -G dbda
+viraj@DBDA:/tmp/iacsd$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,viraj
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:viraj
+floppy:x:25:
+tape:x:26:
+sudo:x:27:viraj,vivo,jelly,kitkat,lollipop,marshmellow
+audio:x:29:pulse
+dip:x:30:viraj
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:viraj
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+crontab:x:104:
+messagebus:x:105:
+systemd-timesync:x:106:
+input:x:107:
+sgx:x:108:
+kvm:x:109:
+render:x:110:
+syslog:x:111:
+_ssh:x:112:
+tss:x:113:
+bluetooth:x:114:
+ssl-cert:x:115:
+uuidd:x:116:
+systemd-oom:x:117:
+tcpdump:x:118:
+avahi-autoipd:x:119:
+netdev:x:120:
+avahi:x:121:
+lpadmin:x:122:viraj
+rtkit:x:123:
+whoopsie:x:124:
+sssd:x:125:
+fwupd-refresh:x:126:
+nm-openvpn:x:127:
+scanner:x:128:saned
+saned:x:129:
+colord:x:130:
+geoclue:x:131:
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:viraj
+viraj:x:1000:
+sambashare:x:136:viraj
+One:x:1001:apple,banana,cat,dog,elephant,fish,gun
+Two:x:1002:horse,icecream
+Three:x:1003:
+Four:x:1004:new,oppo,china
+apple:x:1005:
+banana:x:1006:
+cat:x:1007:
+dog:x:1008:
+elephant:x:1009:
+fish:x:1010:
+gun:x:1011:
+horse:x:1012:
+icecream:x:1013:
+jelly:x:1014:
+kitkat:x:1015:
+marshmellow:x:1016:
+new:x:1017:
+oppo:x:1018:
+vivo:x:1019:
+china:x:1020:
+lollipop:x:1021:
+tom:x:1022:
+bob:x:1023:
+sam:x:1024:
+prince:x:1025:tom
+dac:x:1026:
+dbda:x:1027:bob,prince
+ditiss:x:1028:sam
+viraj@DBDA:/tmp/iacsd$ ls -l
+total 0
+-rw-rw-r-- 1 tom    prince 0 Sep 11 17:32 project-1
+-rw-rw-r-- 1 prince dac    0 Sep 11 17:32 project-2
+-rw-rw---- 1 prince prince 0 Sep 11 17:32 project-3
+-rw-rw-r-- 1 prince prince 0 Sep 11 17:32 project-4
+viraj@DBDA:/tmp/iacsd$ ls -l
+
+sudo chown tom project-3
+sudo chgrp dbda project-4
