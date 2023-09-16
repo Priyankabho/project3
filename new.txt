@@ -1,0 +1,6 @@
+https://www.log2base2.com/shell-script-examples/array/how-to-add-array-elements-in-shell-script.html
+
+
+
+https://www.sarthaks.com/2488842/create-space-for-entering-new-line-of-text-above-the-current-cursor-location-command-used
+https://www.emertxe.com/embedded-systems/linux-systems/ls-assignments/
